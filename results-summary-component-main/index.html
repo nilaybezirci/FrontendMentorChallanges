@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        display: flex;
+
+        height: 100vh;
+        justify-content: center;
+        font-family: "Hanken Grotesk", sans-serif;
+      }
+      .container {
+        background-color: white;
+        border-radius: 30px;
+        align-items: center;
+        max-width: 50%;
+        margin: auto;
+        margin-top: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 4px 8px rgba(115, 121, 219, 0.5);
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+          max-width: 100%;
+        }
+      }
+      .result {
+        background-color: #6541fd;
+        border-radius: 30px;
+      }
+      .resultHeader {
+        padding: 20px;
+        color: #b2aafd;
+      }
+      .resultcircle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #4827d0;
+
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .resultitem {
+        color: aliceblue;
+        font-weight: bold;
+        font-size: 80px;
+        margin-top: 15px;
+        flex-direction: row;
+      }
+      p {
+        color: #ddf2fd;
+        font-size: 30px;
+      }
+      .resultText {
+        text-align: center;
+        padding: 10px;
+      }
+      h1 {
+        color: aliceblue;
+      }
+      .summary {
+        padding: 30px;
+      }
+      .summaryHead {
+        color: #8890a0;
+        font-weight: bold;
+        text-align: left;
+      }
+      .reaction {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 30px;
+
+        width: auto;
+
+        height: 50px;
+        background-color: #ffe6e3;
+        border-radius: 20px;
+      }
+      .summaryText {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .reaction p {
+        color: #fd9497;
+        font-size: large;
+      }
+      .memory {
+        display: flex;
+        justify-content: space-between;
+
+        width: auto;
+        margin-top: 20px;
+
+        height: 50px;
+        background-color: #fffbf2;
+        border-radius: 20px;
+      }
+
+      .memory p {
+        font-size: large;
+        color: #ffdb9b;
+      }
+      .verbal {
+        display: flex;
+        justify-content: space-between;
+        width: auto;
+
+        height: 50px;
+        background-color: #f2fafa;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+      .verbal p {
+        font-size: large;
+        color: #62d2b6;
+      }
+
+      .visual {
+        display: flex;
+        justify-content: space-between;
+        width: auto;
+        margin-top: 20px;
+
+        height: 50px;
+        background-color: #f3f3fd;
+        border-radius: 20px;
+      }
+      .visual p {
+        font-size: large;
+        color: #7379db;
+      }
+      .score {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+      }
+      .score p {
+        color: #919ba8;
+      }
+      .button {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-radius: 30px;
+        background-color: #6541fd;
+        margin-top: 50px;
+      }
+      a {
+        text-decoration: none;
+      }
+      a > p {
+        color: aliceblue;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Nilay Bezirci</a>.
+
+      <div class="container">
+        <div class="result">
+          <h1 class="resultHeader">Your Result</h1>
+          <div class="resultcircle">
+            <p>
+              <b class="resultitem">76 </b> <br />
+              of 100
+            </p>
+          </div>
+          <div class="resultText">
+            <h1>Great</h1>
+            <p>
+              You scored higher than 65% of the people who have taken thase
+              tests.
+            </p>
+          </div>
+        </div>
+        <div class="summary">
+          <h1 class="summaryHead">Summary</h1>
+          <div class="summaryItem">
+            <div class="reaction">
+              <div class="summaryText">
+                <img src="assets/images/icon-reaction.svg" alt="" />
+                <p>Reaction</p>
+              </div>
+              <div class="score">
+                <p><b>80</b> / 100</p>
+              </div>
+            </div>
+            <div class="memory">
+              <div class="summaryText">
+                <img src="assets/images/icon-memory.svg" alt="" />
+                <p>Memory</p>
+              </div>
+              <div class="score">
+                <p><b>92</b> / 100</p>
+              </div>
+            </div>
+
+            <div class="verbal">
+              <div class="summaryText">
+                <img src="assets/images/icon-verbal.svg" alt="" />
+                <p>Verbal</p>
+              </div>
+              <div class="score">
+                <p><b>61</b> / 100</p>
+              </div>
+            </div>
+            <div class="visual">
+              <div class="summaryText">
+                <img src="assets/images/icon-visual.svg" alt="" />
+                <p>Visual</p>
+              </div>
+              <div class="score">
+                <p><b>72 </b> / 100</p>
+              </div>
+            </div>
+          </div>
+          <div class="button">
+            <a href="#"
+              ><p><b>Continue</b></p></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
